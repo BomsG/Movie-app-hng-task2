@@ -1,0 +1,560 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  cursor: pointer;
+}
+.header {
+  background: linear-gradient(
+      to bottom,
+      rgba(16, 29, 117, 0.342),
+      rgba(20, 20, 58, 0.315)
+    ),
+    url("images/Poster.png");
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 90vh;
+  color: #fff;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-txt {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 20px;
+}
+.search-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 7px 10px;
+  width: 100%;
+  border-radius: 10px;
+  border: 2px solid #fff;
+}
+.search-btn input {
+  position: relative;
+  background-color: transparent;
+  color: #fff;
+  border: none;
+  width: 90%;
+  outline: none;
+}
+.search-btn input:focus {
+  border: none;
+  outline: none;
+}
+.menu {
+  display: flex;
+  align-items: center;
+}
+.menu button {
+  padding: 5px 10px;
+  background: transparent;
+  color: #fff;
+  border: none;
+}
+
+.title {
+  /* margin: 60px 50px; */
+  padding: 60px 50px;
+  width: 40rem;
+}
+.title h1 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+.title h2 {
+  font-size: 30px;
+}
+
+.hero {
+  margin: 60px 50px;
+}
+.rating {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+}
+.Imdb {
+  margin-right: 50px;
+  display: flex;
+  align-items: center;
+}
+.Imdb img {
+  width: 20px;
+}
+.rate {
+  font-size: 10px;
+  margin-left: 10px;
+}
+.tomatoes {
+  display: flex;
+  align-items: center;
+}
+.tomatoes img {
+  width: 20px;
+}
+.description {
+  margin-top: 20px;
+  font-size: 14px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.title button {
+  padding: 10px 60px;
+  margin-top: 20px;
+  border: none;
+  background-color: red;
+  color: #fff;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.search-input {
+  display: none;
+}
+
+@media only screen and (max-width: 800px) {
+  .header {
+    height: 90vh;
+  }
+  nav {
+    padding: 10px 20px;
+  }
+  .logo-img {
+    margin-right: 10px;
+    width: 40px;
+  }
+  .logo-txt {
+    display: none;
+  }
+
+  .search-btn input {
+    position: relative;
+    padding: 7px 10px;
+    width: 200px;
+    border-radius: 5px;
+    font-size: 10px;
+  }
+
+  .menu button {
+    visibility: hidden;
+  }
+  .title {
+    padding: 120px 50px;
+    width: 40rem;
+  }
+  .description {
+    width: 200px;
+  }
+}
+
+.featured {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+}
+.top {
+  display: flex;
+}
+.featured p {
+  color: #ff000f;
+  font-weight: bold;
+}
+.movieList {
+  display: grid;
+  grid-template-columns: repeat(4, 0.2fr);
+  gap: 10px;
+}
+@media only screen and (max-width: 1000px) {
+  .movieList {
+    grid-template-columns: repeat(2, 0.2fr);
+    justify-content: center;
+    gap: 20px;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .movieList {
+    grid-template-columns: repeat(1, 0.2fr);
+    justify-content: center;
+    gap: 20px;
+  }
+  .hero {
+    margin: 60px 10px;
+  }
+  .featured h1 {
+    font-size: 20px;
+  }
+  .movieList img {
+    width: 100%;
+    height: 500px;
+    border-radius: 10px;
+  }
+}
+.movieList img {
+  width: 300px;
+  height: 500px;
+  object-fit: cover;
+}
+
+.movie-rate {
+  font-size: 15px;
+  margin-top: 10px;
+  font-weight: bold;
+  color: #a19e9e;
+}
+.movie-title {
+  font-size: 20px;
+  font-weight: bold;
+  font-weight: bold;
+  margin-top: 10px;
+}
+.Imdb2 {
+  display: flex;
+  margin-right: 20px;
+  align-items: center;
+}
+.Imdb2 img {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+.Imdb2 h3 {
+  font-size: 12px;
+}
+.tomatoes2 {
+  display: flex;
+  margin-right: 20px;
+  align-items: center;
+}
+.tomatoes2 img {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+.tomatoes2 h3 {
+  font-size: 12px;
+}
+
+.footer {
+  text-align: center;
+  margin-top: 200px;
+  margin-left: 50px;
+}
+.footer ul {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  align-items: center;
+}
+.footer ul li {
+  list-style: none;
+  margin-right: 20px;
+}
+.footer ul li a {
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: bold;
+  color: #000;
+}
+.footer p {
+  margin-bottom: 20px;
+  font-size: 10px;
+}
+
+@media only screen and (max-width: 800px) {
+  .footer ul li a {
+    font-size: 13px;
+  }
+}
+
+/* for the Movie Box */
+.movieBox {
+  display: flex;
+}
+.Navigation {
+  border: 1px solid rgba(0, 0, 0, 0.212);
+  width: 230px;
+  height: 800px;
+  padding-top: 80px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-top-right-radius: 70px;
+}
+.lo-go {
+  margin-bottom: 70px;
+  display: flex;
+  align-items: center;
+}
+.logoImg {
+  margin-right: 10px;
+}
+.logoTxt {
+  font-size: 20px;
+}
+.nav-link {
+  display: flex;
+  align-items: center;
+  padding-bottom: 30px;
+}
+.nav-link:hover {
+  background-color: #d83d6433;
+  padding: 5px 5px;
+}
+.link-img {
+  width: 40px;
+  padding-right: 15px;
+}
+.Navigation h2 {
+  font-size: 19px;
+}
+.play {
+  border: 1px solid rgba(190, 18, 60, 0.7);
+  padding: 10px 20px;
+  border-radius: 20px;
+  margin-bottom: 50px;
+}
+.play h3 {
+  font-size: 16px;
+  color: rgba(32, 32, 32, 0.8);
+  font-weight: bold;
+  padding-bottom: 10px;
+}
+.play p {
+  font-size: 12px;
+  padding-bottom: 10px;
+}
+.playing {
+  background-color: #be123c33;
+  border-radius: 30px;
+  color: #be123c;
+  font-size: 12px;
+  text-align: center;
+  padding: 10px 10px;
+  font-weight: bold;
+}
+.top-details {
+  width: 100%;
+  padding: 50px 30px;
+}
+
+.display-image {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.content {
+  display: flex;
+}
+.details-txt {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+.details-txt p {
+  font-size: 13px;
+  color: #0000009a;
+  font-weight: bold;
+  padding-right: 20px;
+}
+.details-txt h3 {
+  font-size: 14px;
+  color: #ff000f;
+  padding-right: 30px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.genRe {
+  display: flex;
+}
+.top-details p {
+  font-size: 15px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.Actor {
+  display: flex;
+  margin-top: 30px;
+}
+.Actor h3 {
+  font-size: 18px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #0000008f;
+}
+.Actor p {
+  color: #ff000f;
+  padding-left: 20px;
+  font-size: 15px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.award {
+  display: flex;
+  margin-top: 30px;
+  align-items: center;
+}
+.award button {
+  background-color: #be123c;
+  color: #fff;
+  font-weight: bold;
+  padding: 10px 40px;
+  border: none;
+  font-size: 15px;
+}
+.award h4 {
+  border: 1px solid black;
+  padding: 8px 40px;
+}
+.starAward {
+  margin-top: 15px;
+}
+.starA {
+  width: 360px;
+  height: 150px;
+  object-fit: cover;
+}
+@media only screen and (max-width: 800px) {
+  .Navigation {
+    width: 100px;
+  }
+  .logoImg {
+    width: 50px;
+    margin-left: 20px;
+  }
+  .logoTxt {
+    visibility: hidden;
+  }
+  .nav-link h2 {
+    visibility: hidden;
+  }
+  .link-img {
+    width: 50px;
+    margin-left: 20px;
+  }
+  .play h3 {
+    font-size: 12px;
+  }
+  .play p {
+    font-size: 8px;
+  }
+  .playing {
+    font-size: 5px;
+  }
+  .display-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  .content {
+    display: block;
+  }
+  .details-txt {
+    display: block;
+  }
+  .details-txt p {
+    font-size: 12px;
+  }
+  .details-txt h3 {
+    font-size: 10px;
+  }
+  .genRe {
+    margin-top: 10px;
+  }
+  .top-details p {
+    width: 300px;
+    font-size: 18px;
+  }
+  .Actor h3 {
+    font-size: 15px;
+  }
+  .Actor p {
+    font-size: 13px;
+  }
+  .award {
+    display: block;
+  }
+  .award button {
+    width: 90%;
+    font-size: 15px;
+    padding: 15px 20px;
+  }
+  .award h4 {
+    width: 90%;
+    padding: 10px 10px;
+    font-size: 12px;
+  }
+  .starImg {
+    width: 300px;
+  }
+  .starA {
+    width: 300px;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .play {
+    visibility: hidden;
+  }
+}
+/* Loading.css */
+
+.loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.spinner {
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top: 4px solid #007bff;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.switch-icon {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 26px;
+  color: #fff;
+  background-color: #ff000f;
+  border-radius: 50%;
+}
+.switch-icon:hover {
+  background-color: #fff;
+  color: #ff000f;
+}
